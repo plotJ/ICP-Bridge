@@ -1,6 +1,6 @@
 # ICP Bridge - Cross-Chain Testnet Bridge
 
-ICP Bridge is a decentralized application (dApp) that enables cross-chain transactions between different testnets, deployed on the Internet Computer Protocol (ICP).
+ICP Bridge is a DApp that runs on the ICP infrastructure, and allows bridging from EVM to ICP chains.
 
 ## Deployed Canisters
 
