@@ -25,6 +25,10 @@
       },
       "type": "custom",
       "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    },
+    "evm_rpc": {
+      "type": "pull",
+      "id": "7hfb6-caaaa-aaaar-qadga-cai"
     }
   },
   "defaults": {
@@ -39,7 +43,9 @@
       "type": "ephemeral"
     },
     "ic": {
-      "providers": ["https://mainnet.dfinity.network"],
+      "providers": [
+        "https://mainnet.dfinity.network"
+      ],
       "type": "persistent"
     }
   },

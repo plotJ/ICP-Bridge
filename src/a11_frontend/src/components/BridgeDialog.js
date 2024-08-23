@@ -6,6 +6,7 @@ import ConfirmationModal from './ConfirmationModal';
 import { Actor, HttpAgent } from "@dfinity/agent";
 import { idlFactory } from "../declarations/a11_backend/a11_backend.did.js";
 import { ethers } from "ethers";
+import { Principal } from "@dfinity/principal";
 
 
 // Create an agent and actor for IC
@@ -106,6 +107,11 @@ export default function BridgeDialog({ walletAddress, setWalletAddress }) {
             // Wait for the transaction to be mined
             await tx.wait();
             console.log("Mint transaction confirmed");
+
+            console.log("Icp Address:", icpAddress);
+
+            const Call_Bridge_ETH_to_ICP = await actor.BridgeETHToICP(String(tx.hash),Principal.fromText(icpAddress));
+            console.log("Bridge_ETH_to_ICP:", Call_Bridge_ETH_to_ICP);
     
             setNotificationState({
                 isOpen: true,
