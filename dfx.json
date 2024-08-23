@@ -9,10 +9,11 @@
         "a11_backend"
       ],
       "source": [
-        "src/a11_frontend/dist"
+        "src/a11_frontend/dist",
+        "src/a11_frontend/src"
       ],
       "type": "assets",
-      "workspace": "a11_frontend"
+      "workspace": "src/a11_frontend"
     },
     "internet_identity": {
       "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
@@ -30,6 +31,16 @@
     "build": {
       "args": "",
       "packtool": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    },
+    "ic": {
+      "providers": ["https://mainnet.dfinity.network"],
+      "type": "persistent"
     }
   },
   "output_env_file": ".env",
